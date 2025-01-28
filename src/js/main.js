@@ -27,16 +27,12 @@ const application = {
 			text: text.toLowerCase(),
 			done: false,
 		});
-		console.log(this.data);
 		localStorage.setItem('tasks', JSON.stringify(this.data));
 		this.render();
 	},
 	removeTask(taskId) {
-		console.log('Remove Task');
 		taskId = Number(taskId);
-		console.log(taskId);
 		this.data = this.data.filter(task => task.id !== taskId);
-		console.log(this.data);
 		localStorage.setItem('tasks', JSON.stringify(this.data));
 		this.render();
 	},
@@ -46,7 +42,6 @@ const application = {
 			task.id === taskId ? { ...task, done: !task.done } : task,
 		);
 		localStorage.setItem('tasks', JSON.stringify(this.data));
-		console.log(this.data);
 		this.render();
 	},
 	render() {
@@ -56,7 +51,6 @@ const application = {
 				this.data.filter(task => task.done).length + ' de ' + this.data.length;
 
 			this.elements.taskList.innerHTML = ' ';
-			// console.log('Application Rendered');
 
 			this.data.forEach(task => {
 				const _taskItem = document.createElement('li');
