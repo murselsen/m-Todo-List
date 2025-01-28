@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="./src/images/rocket.png" type="image/png" />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>ToDo List 👅</title>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-header-logo">
+        <img src="./src/images/rocket.png" class="app-logo" alt="logo" />
+        <h1 class="app-name">todo</h1>
+      </div>
+    </header>
+    <main>
+      <section class="app-main">
+        <form id="todo-form" class="todo-form">
+          <input
+            type="text"
+            name="todo-item-input"
+            class="todo-item-input"
+            id="todo-item-input"
+            placeholder="Add a new task"
+          />
+          <button type="submit" class="todo-item-btn">
+            Create
+            <svg width="16" height="16" viewBox="0 0 16 16">
+              <image href="./src/images/circle-plus.svg"></image>
+            </svg>
+          </button>
+        </form>
+        <div class="todo-wrapper">
+          <div class="task-info-row">
+            <div class="task-info">
+              <span class="task-info__title">Tasks created</span>
+              <span class="task-info__count" id="task-created-count">5</span>
+            </div>
+            <div class="task-info task-completed-info">
+              <span class="task-info__title">Completed</span>
+              <span class="task-info__count" id="task-completed-count"
+                >2 de 5</span
+              >
+            </div>
+          </div>
+          <div class="task-list-wrapper">
+            <ul class="task-list" id="task-list">
+              <li id="task-1348957394879" class="task-item done">
+                <span class="task-checkbox">✓</span>
+                <p class="task-text">
+                  Integer urna interdum massa libero auctor neque turpis turpis
+                  semper. Duis vel sed fames integer.
+                </p>
+                <button type="button" class="task-delete-btn">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </li>
+              <li id="task-1348957394879" class="task-item done">
+                <span class="task-checkbox">✓</span>
+                <p class="task-text">
+                  Integer urna interdum massa libero auctor neque turpis turpis
+                  semper. Duis vel sed fames integer.
+                </p>
+                <button type="button" class="task-delete-btn">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </li>
+              <li id="task-1348957394879" class="task-item">
+                <span class="task-checkbox"></span>
+                <p class="task-text">
+                  Integer urna interdum massa libero auctor neque turpis turpis
+                  semper. Duis vel sed fames integer.
+                </p>
+                <button type="button" class="task-delete-btn">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </li>
+              <li id="task-1348957394879" class="task-item">
+                <span class="task-checkbox"></span>
+                <p class="task-text">
+                  Integer urna interdum massa libero auctor neque turpis turpis
+                  semper. Duis vel sed fames integer.
+                </p>
+                <button type="button" class="task-delete-btn">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </li>
+              <li id="task-1348957394879" class="task-item">
+                <span class="task-checkbox"></span>
+                <p class="task-text">
+                  Integer urna interdum massa libero auctor neque turpis turpis
+                  semper. Duis vel sed fames integer.
+                </p>
+                <button type="button" class="task-delete-btn">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
