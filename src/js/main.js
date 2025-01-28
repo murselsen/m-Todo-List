@@ -47,8 +47,11 @@ const application = {
 	render() {
 		if (this.data.length !== 0) {
 			this.elements.taskCreatedCount.innerText = this.data.length.toString();
+			taskDoneCount = this.data.filter(task => task.done).length;
 			this.elements.taskCompletedCount.innerText =
-				this.data.filter(task => task.done).length + ' de ' + this.data.length;
+				this.data.length === taskDoneCount
+					? this.data.length.toString()
+					: taskDoneCount.toString() + ' de ' + this.data.length;
 
 			this.elements.taskList.innerHTML = ' ';
 
