@@ -1,185 +1,188 @@
 .app-header {
-  width: 100%;
-  height: 200px;
-  align-content: center;
-  justify-items: center;
-  background-color: #0d0d0d;
+	width: 100%;
+	height: 200px;
+	align-content: center;
+	justify-items: center;
+	background-color: #0d0d0d;
 }
 .app-header .app-header-logo {
-  width: fit-content;
-  display: flex;
-  gap: 12px;
+	width: fit-content;
+	display: flex;
+	gap: 12px;
 }
 .app-header .app-header-logo .app-name {
-  font-size: 40px;
-  font-weight: 900;
-  background: #4ea8de;
-  background: linear-gradient(to right, #4ea8de 18%, #5e60ce 74%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	font-size: 40px;
+	font-weight: 900;
+	background: #4ea8de;
+	background: linear-gradient(to right, #4ea8de 18%, #5e60ce 74%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 .app-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	position: relative;
 }
 .app-main .todo-form {
-  position: absolute;
-  top: -2.5%;
-  width: 738px;
-  height: 54px;
-  display: flex;
-  gap: 8px;
+	position: absolute;
+	top: -2.5%;
+	width: 738px;
+	height: 54px;
+	display: flex;
+	gap: 8px;
 }
 .todo-form .todo-item-input {
-  padding: 16px;
-  flex: 2;
-  background-color: #262626;
-  border: inset 1px solid #0d0d0d;
-  outline: none;
-  border-radius: 8px;
-  font-size: 16px;
-  color: #808080;
+	padding: 16px;
+	flex: 2;
+	background-color: #262626;
+	border: inset 1px solid #0d0d0d;
+	outline: none;
+	border-radius: 8px;
+	font-size: 16px;
+	color: #808080;
 }
 .todo-form .todo-item-input:focus {
-  border: 1px solid #5e60ce;
-  color: white;
+	border: 1px solid #5e60ce;
+	color: white;
 }
 .todo-form .todo-item-btn {
-  padding: 16px;
-  border: 0;
-  border-radius: 8px;
-  outline: none;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.4;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  background-color: #1e6f9f;
-  cursor: pointer;
+	padding: 16px;
+	border: 0;
+	border-radius: 8px;
+	outline: none;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.4;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+	background-color: #1e6f9f;
+	cursor: pointer;
 }
 .todo-form .todo-item-btn:hover {
-  background-color: #4ea8de;
+	background-color: #4ea8de;
 }
 
 .app-main .todo-wrapper {
-  width: 738px;
-  min-height: 287px;
-  margin-top: 91px;
+	width: 738px;
+	min-height: 287px;
+	margin-top: 91px;
 }
 .todo-wrapper .task-info-row {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 .todo-wrapper .task-info-row .task-info {
-  color: #4ea8de;
+	color: #4ea8de;
 }
 .todo-wrapper .task-info-row .task-info {
-  color: #4ea8de;
+	color: #4ea8de;
 }
 .todo-wrapper .task-info-row .task-info.task-completed-info {
-  color: #8284fa;
+	color: #8284fa;
 }
 
 .todo-wrapper .task-info-row .task-info .task-info__count {
-  background-color: #333333;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 999px;
+	background-color: #333333;
+	color: white;
+	padding: 2px 8px;
+	border-radius: 999px;
 }
 
 .todo-wrapper .task-list-wrapper {
-  margin-top: 24px;
+	margin-top: 24px;
 }
 
 .todo-wrapper .task-list-wrapper .task-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 }
 
 .todo-wrapper .task-list-wrapper .task-list .task-item {
-  padding: 16px;
-  width: 100%;
-  height: fit-content;
-  border-radius: 8px;
-  background-color: #262626;
-  color: #f2f2f2;
-  display: flex;
-  gap: 12px;
-  line-height: 140%;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.06);
+	padding: 16px;
+	width: 100%;
+	height: fit-content;
+	border-radius: 8px;
+	background-color: #262626;
+	color: #f2f2f2;
+	display: flex;
+	gap: 12px;
+	justify-content: space-between;
+	line-height: 140%;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.06);
 }
 .todo-wrapper .task-list-wrapper .task-list .task-item .task-checkbox {
-  width: 17px;
-  height: 17px;
-  padding: 4px;
-  font-size: 20px;
-  text-align: center;
-  border-radius: 50%;
-  border: 3px solid #4ea8de;
-  margin: calc(24px - 17px);
-  cursor: pointer;
+	width: 17px;
+	height: 17px;
+	padding: 4px;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 50%;
+	border: 3px solid #4ea8de;
+	margin: calc(24px - 17px);
+	cursor: pointer;
 }
 
 .todo-wrapper .task-list-wrapper .task-list .task-item .task-text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.4;
+	text-transform: capitalize;
+	flex: 1;
 }
 
 .todo-wrapper .task-list-wrapper .task-list .task-item.done .task-text {
-  text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 .todo-wrapper .task-list-wrapper .task-list .task-item .task-checkbox:hover {
-  border-color: #1e6f9f;
-  background-color: rgba(30, 112, 159, 0.2);
+	border-color: #1e6f9f;
+	background-color: rgba(30, 112, 159, 0.2);
 }
 
 .todo-wrapper .task-list-wrapper .task-list .task-item.done .task-checkbox {
-  background-color: #8284fa;
-  border-color: #8284fa;
+	background-color: #8284fa;
+	border-color: #8284fa;
 }
 
 .todo-wrapper
-  .task-list-wrapper
-  .task-list
-  .task-item.done
-  .task-checkbox:hover {
-  background-color: #9596f19f;
+	.task-list-wrapper
+	.task-list
+	.task-item.done
+	.task-checkbox:hover {
+	background-color: #9596f19f;
 }
 
 .todo-wrapper .task-list-wrapper .task-list .task-item .task-delete-btn {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  transition: all 0.2s;
-  color: #808080;
-  font-size: 18px;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	transition: all 0.2s;
+	color: #808080;
+	font-size: 18px;
 }
 
 .todo-wrapper
-  .task-list-wrapper
-  .task-list
-  .task-item
-  .task-delete-btn
-  svg
-  path {
-  fill: #808080;
+	.task-list-wrapper
+	.task-list
+	.task-item
+	.task-delete-btn
+	svg
+	path {
+	fill: #808080;
 }
 
 /* Task-delete-btn:hover */
 .todo-wrapper .task-list-wrapper .task-list .task-item .task-delete-btn:hover {
-  background-color: #333333;
-  border-radius: 4px;
-  color: #e25858;
+	background-color: #333333;
+	border-radius: 4px;
+	color: #e25858;
 }

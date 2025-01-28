@@ -5,15 +5,29 @@ const application = {
 	},
 	data: [],
 	render() {
+		this.elements.taskList.innerHTML = ' ';
 		console.log('Application Rendered');
+		this.data.forEach(task => {
+			const _taskItem = document.createElement('li');
+			_taskItem.id = `task-${task.id}`;
+			_taskItem.className = task.done ? 'task-item done' : 'task-item';
+			_taskItem.innerHTML = `
+                <span class="task-checkbox">${task.done ? '✓' : ''}</span>
+                <p class="task-text">${task.text}</p>
+                <button type="button" class="task-delete-btn">
+                    <i class="fa fa-trash"></i>
+                </button>
+            `;
+			this.elements.taskList.appendChild(_taskItem);
+		});
+	},
+	init() {
 		const taskList = localStorage.getItem('tasks');
 		if (taskList !== '1') {
 			this.data = JSON.parse(taskList);
 		} else {
 			this.data = [];
 		}
-	},
-	init() {
 		this.render();
 		console.log(this);
 	},
@@ -25,7 +39,7 @@ const application = {
 	addTask(text) {
 		this.data.push({
 			id: this.random(10000000, 999999999),
-			text: text.toLocaleUpperCase(),
+			text: text.toLowerCase(),
 			done: false,
 		});
 		console.log(this.data);
