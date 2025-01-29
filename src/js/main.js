@@ -8,13 +8,14 @@ const application = {
 	data: [],
 
 	init() {
+		this.render();
 		const taskList = localStorage.getItem('tasks');
 		if (taskList !== null) {
 			this.data = JSON.parse(taskList);
+			this.render();
 		} else {
 			this.data = [];
 		}
-		this.render();
 	},
 	// Random number generator simple method
 	random(min, max) {
@@ -22,8 +23,10 @@ const application = {
 	},
 
 	addTask(text) {
+		text = text.trim();
 		if (text === '' || text === ' ') {
 			alert('Task cannot be empty');
+			this.elements.taskForm.reset();
 		} else {
 			this.data.push({
 				id: this.random(10000000, 999999999),
