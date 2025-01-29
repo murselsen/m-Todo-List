@@ -22,12 +22,16 @@ const application = {
 	},
 
 	addTask(text) {
-		this.data.push({
-			id: this.random(10000000, 999999999),
-			text: text.toLowerCase(),
-			done: false,
-		});
-		localStorage.setItem('tasks', JSON.stringify(this.data));
+		if (text === '' || text === ' ') {
+			alert('Task cannot be empty');
+		} else {
+			this.data.push({
+				id: this.random(10000000, 999999999),
+				text: text.toLowerCase(),
+				done: false,
+			});
+			localStorage.setItem('tasks', JSON.stringify(this.data));
+		}
 		this.render();
 	},
 	removeTask(taskId) {
@@ -96,7 +100,7 @@ application.elements.taskForm.addEventListener('submit', event => {
 	const _formData = new FormData(application.elements.taskForm);
 	const _taskItemInputValue = _formData.get('todo-item-input');
 	application.addTask(_taskItemInputValue);
-	alert('Task Form submitted');
+	// alert('Task Form submitted');
 });
 
 application.init();
