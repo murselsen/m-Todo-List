@@ -51,7 +51,7 @@ const application = {
 			this.elements.taskCompletedCount.innerText =
 				this.data.length === taskDoneCount
 					? this.data.length.toString()
-					: taskDoneCount.toString() + ' de ' + this.data.length;
+					: taskDoneCount.toString() + ' of ' + this.data.length;
 
 			this.elements.taskList.innerHTML = ' ';
 
